@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:macro name="diffbot_isaac" params="prefix">
+
+    <!-- =============== Isaac Sim =============== -->
+    <isaac>
+      <sensor name="lidar_link" type="lidar">
+        <topic>scan</topic>
+        <sensor_dimension_num>3</sensor_dimension_num> <!-- 2 or 3 -->
+        <config>Example_Rotary</config>
+        <!-- Config Example
+        <config>Example_Rotary</config>
+        <config>slamtec/RPLIDAR_S2E</config> LaserScan do not work Why?
+        <config>hokuyo/UST-30LX</config> LaserScan do not work Why?
+        -->
+      </sensor>
+
+      <sensor name="camera_link" type="camera">
+        <topic>image_raw</topic>
+        <horizontal_fov_rad>1.3962634</horizontal_fov_rad>
+        <horizontal_focal_length>30</horizontal_focal_length> <!-- optical parameter -->
+        <vertical_focal_length>30</vertical_focal_length> <!-- optical parameter -->
+        <focus_distance>400</focus_distance> <!-- distance for clear image -->
+        <projection>perspective</projection> <!-- perspective or orthgonal -->
+        <image>
+           <width>600</width>
+           <height>600</height>
+        </image>
+        <clip>
+          <near>0.02</near>
+          <far>300</far>
+        </clip>
+        <update_rate>10.0</update_rate>
+      </sensor>
+
+      <sensor name="depth_camera_link" type="depth_camera">
+        <topic>image_raw</topic>
+        <horizontal_fov_rad>1.3962634</horizontal_fov_rad>
+        <horizontal_focal_length>30</horizontal_focal_length> <!-- optical parameter -->
+        <vertical_focal_length>30</vertical_focal_length> <!-- optical parameter -->
+        <focus_distance>400</focus_distance> <!-- distance for clear image -->
+        <projection>perspective</projection> <!-- perspective or orthgonal -->
+        <image>
+          <width>320</width>
+          <height>240</height>
+        </image>
+        <clip>
+          <near>0.1</near>
+          <far>100</far>
+        </clip>
+        <update_rate>10</update_rate>
+      </sensor>
+    </isaac>
+
+  </xacro:macro>
+    
+</robot>
