@@ -1,9 +1,12 @@
 #Comprehensive Guide to Dokerised implementation of IsaacSim with ROS 2 for drone development
 
 ## Prerequisites
-*Ubuntu 20.04/22.04 Operating System
-*NVIDIA GPU (RTX 2070 or higher)
-*NVIDIA GPU Driver (recommended version 525.85)
+- Ubuntu 20.04/22.04 Operating System
+- NVIDIA GPU (RTX 2070 or higher)
+- NVIDIA GPU Driver (recommended version 525.85)
+
+## Neucleas Server
+[Download](https://docs.omniverse.nvidia.com/install-guide/latest/workstation-install.html) and install Omniverse Launcher and install [Neucleas Server](https://docs.omniverse.nvidia.com/launcher/latest/workstation-launcher.html#collaboration-tab)
 
 ## Installing docker
 Follow the latest instructions at the [official docker page](https://docs.docker.com/engine/install/ubuntu/)
