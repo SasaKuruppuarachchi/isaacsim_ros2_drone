@@ -5,8 +5,8 @@
 - NVIDIA GPU (RTX 2070 or higher)
 - NVIDIA GPU Driver (recommended version 525.85)
 
-## Neucleas Server
-[Download](https://docs.omniverse.nvidia.com/install-guide/latest/workstation-install.html) and install Omniverse Launcher and install [Neucleas Server](https://docs.omniverse.nvidia.com/launcher/latest/workstation-launcher.html#collaboration-tab)
+## Nucleus Server
+[Download](https://docs.omniverse.nvidia.com/install-guide/latest/workstation-install.html) and install Omniverse Launcher and install [Nucleus Server](https://docs.omniverse.nvidia.com/launcher/latest/workstation-launcher.html#collaboration-tab)
 
 ## Installing docker
 Follow the latest instructions at the [official docker page](https://docs.docker.com/engine/install/ubuntu/)
