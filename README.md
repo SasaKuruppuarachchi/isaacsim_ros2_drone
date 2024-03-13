@@ -17,7 +17,7 @@ Portainer CE is an open-source GUI for creating and managing docker containers. 
 ## Installing Nvidia Docker
 Install the Nvidia Container toolkit with [These Instructions](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html)
 
-If GPUs fail to load after deploying Isaac sim docker please follow [these instructions]()
+If GPUs fail to load after deploying Isaac sim docker please follow [these instructions](). TODO
 
 ## General Installation
 
@@ -43,21 +43,44 @@ If GPUs fail to load after deploying Isaac sim docker please follow [these instr
    ./launch_docker.sh
    ```
 5. Launch Isaac Sim
+
+   At this point, you are expected to have NVIDIA Isaac Sim fully installed and working. To make sure you have everything setup correctly, open a new terminal window (Ctrl+Alt+T), and test the following commands:
+
+   Check that the simulator app can be launched
+
+   - Run the simulator with the --help argument to see all available options
    ```bash
-   cd /isaac-sim
-   ./runapp.sh
+   ISAACSIM --help
    ```
+   - Run the simulator. A new window should open
+   ```bash
+   ISAACSIM
+   ```
+   Check that you can launch the simulator from a python script (standalone mode)
+
+   - Run the bundled python interpreter and see if it prints on the terminal "Hello World."
+   ```bash
+   ISAACSIM_PYTHON -c "print('Hello World.')"
+   ```
+
+   - Run the python interpreter and check if we can run a script that starts the simulator and adds cubes to the world
+   ```bash
+   ISAACSIM_PYTHON ${ISAACSIM_PATH}/standalone_examples/api/omni.isaac.core/add_cubes.py
+   ```
+
+   If you were unable to run the commands above successfuly, then something is incorrectly configured. Please do not proceed with this installation until you have everything setup correctly.
+
 
    > [!NOTE]
    > Secondary screens could freeze due to a bug in Nvidia driver. Disconnect and reconnect the HDMI
    > If Isaac sim failed to launch please post the log in issues section
 
-<!-- 6. Attach to docker in new terminal
+6. Attach to docker in new terminal
    ```bash
    docker exec -it isaac-sim-ros2 bash
    ```
 
-7. Build ros2 source codes
+<!-- 7. Build ros2 source codes
    ```bash
    colcon build && source install/setup.bash
    ```
