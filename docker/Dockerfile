@@ -56,14 +56,16 @@ RUN apt install git make cmake python3-pip
 RUN pip install kconfiglib jinja2 empy jsonschema pyros-genmsg packaging toml numpy future
 
 # Drone dev
-WORKDIR cd /home/ubuntu
+WORKDIR /home/ubuntu
 RUN git clone https://github.com/PegasusSimulator/PegasusSimulator.git
+WORKDIR /home/ubuntu/PegasusSimulator/extensions
+RUN ISAACSIM_PYTHON -m pip install --editable pegasus.simulator
+
 RUN git clone https://github.com/PX4/PX4-Autopilot.git
-WORKDIR cd /home/ubuntu/PX4-Autopilot
+WORKDIR /home/ubuntu/PX4-Autopilot
 RUN git checkout v1.14.1
 RUN git submodule update --init --recursive
 RUN make px4_sitl_default none
-
 
 RUN echo 'source /opt/ros/humble/setup.bash' >> ~/.bashrc
 RUN echo 'source /root/colcon_ws/install/setup.sh' >> ~/.bashrc
