@@ -21,40 +21,54 @@ If GPUs fail to load after deploying Isaac sim docker please follow [these instr
 
 ## General Installation
 
-2. Clone the repo to your ros2 workspace
+1. Clone the repo to your ros2 workspace
    ```bash
-   git clone https://github.com/hijimasa/isaac-ros2-control-sample.git
+   git clone https://github.com/SasaKuruppuarachchi/isaacsim_ros2_drone.git
    ```
 
-3. Get git submodules
+2. Get git submodules
    ```bash
-   cd isaac-ros2-control-sample
+   cd isaacsim_ros2_drone
    git submodule update --init --recursive
    ```
 
-4. Build a docker image with shell script.
+3. Build a docker image with shell script.
    ```bash
    cd docker
    ./build_docker_image.sh
    ```
 
-5. Launch a docker container
+4. Launch a docker container
    ```bash
    ./launch_docker.sh
    ```
+5. Launch Isaac Sim
+   ```bash
+   cd /isaac-sim
+   ./runapp.sh
+   ```
 
-6. Build ros2 source codes
+   > [!NOTE]
+   > Secondary screens could freeze due to a bug in Nvidia driver. Disconnect and reconnect the HDMI
+   > If Isaac sim failed to launch please post the log in issues section
+
+<!-- 6. Attach to docker in new terminal
+   ```bash
+   docker exec -it isaac-sim-ros2 bash
+   ```
+
+7. Build ros2 source codes
    ```bash
    colcon build && source install/setup.bash
    ```
 
-7. Launch the package
+8. Launch the package
 
    7.1. For Mobile Robot
    - To launch simulator
    ```bash
    ros2 run isaac_ros2_scripts launcher
-   ```
+   ``` -->
 
 
 
