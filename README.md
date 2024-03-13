@@ -35,6 +35,7 @@ If GPUs fail to load after deploying Isaac sim docker please follow [these instr
 3. Build a docker image with shell script.
    ```bash
    cd docker
+   chmod +x build_docker_image.sh
    ./build_docker_image.sh
    ```
 
