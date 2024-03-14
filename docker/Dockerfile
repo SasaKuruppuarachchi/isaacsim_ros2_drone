@@ -56,14 +56,14 @@ RUN apt install git make cmake python3-pip
 RUN pip install kconfiglib jinja2 empy jsonschema pyros-genmsg packaging toml numpy future
 
 # Drone dev
-WORKDIR /home/ubuntu
+WORKDIR /root
 RUN git clone https://github.com/PegasusSimulator/PegasusSimulator.git
-WORKDIR /home/ubuntu/PegasusSimulator/extensions
+WORKDIR /root/PegasusSimulator/extensions
 RUN /isaac-sim/python.sh -m pip install --editable pegasus.simulator
 
-WORKDIR /home/ubuntu/
+WORKDIR /root
 RUN git clone https://github.com/PX4/PX4-Autopilot.git
-WORKDIR /home/ubuntu/PX4-Autopilot/
+WORKDIR /root/PX4-Autopilot/
 RUN git checkout v1.14.1
 RUN git submodule update --init --recursive
 
