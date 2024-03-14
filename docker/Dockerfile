@@ -59,20 +59,20 @@ RUN pip install kconfiglib jinja2 empy jsonschema pyros-genmsg packaging toml nu
 WORKDIR /home/ubuntu
 RUN git clone https://github.com/PegasusSimulator/PegasusSimulator.git
 WORKDIR /home/ubuntu/PegasusSimulator/extensions
-RUN ISAACSIM_PYTHON -m pip install --editable pegasus.simulator
+RUN /isaac-sim/python.sh -m pip install --editable pegasus.simulator
 
+WORKDIR /home/ubuntu/
 RUN git clone https://github.com/PX4/PX4-Autopilot.git
-WORKDIR /home/ubuntu/PX4-Autopilot
+WORKDIR /home/ubuntu/PX4-Autopilot/
 RUN git checkout v1.14.1
 RUN git submodule update --init --recursive
-RUN make px4_sitl_default none
 
 RUN echo 'source /opt/ros/humble/setup.bash' >> ~/.bashrc
 RUN echo 'source /root/colcon_ws/install/setup.sh' >> ~/.bashrc
 
 RUN echo 'export ISAACSIM_PATH="/isaac-sim"' >> ~/.bashrc
-RUN echo 'alias ISAACSIM_PYTHON="${ISAACSIM_PATH}/python.sh"' >> ~/.bashrc
-RUN echo 'alias ISAACSIM="${ISAACSIM_PATH}/runapp.sh"' >> ~/.bashrc    
+RUN echo 'alias ISAACSIM_PYTHON="/isaac-sim/python.sh"' >> ~/.bashrc
+RUN echo 'alias ISAACSIM="/isaac-sim/runapp.sh"' >> ~/.bashrc    
 
 
 

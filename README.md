@@ -76,7 +76,7 @@ If GPUs fail to load after deploying Isaac sim docker please follow [these instr
    > Secondary screens could freeze due to a bug in Nvidia driver. Disconnect and reconnect the HDMI
    > If Isaac sim failed to launch please post the log in issues section
 
-6. Attach to docker in new terminal
+6. Attach to docker in new terminal to build and launch Px4_Auopilot
    ```bash
    docker exec -it isaac-sim-ros2 bash
    ```
