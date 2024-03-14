@@ -16,3 +16,6 @@
 [submodule "colcon_ws/src/isaac_ros2_utils"]
 	path = colcon_ws/src/isaac_ros2_utils
 	url = https://github.com/hijimasa/isaac_ros2_utils.git
+[submodule "PX4/PX4-Autopilot"]
+	path = PX4/PX4-Autopilot
+	url = https://github.com/PX4/PX4-Autopilot.git
