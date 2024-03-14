@@ -132,28 +132,28 @@ When enabling the extension for the first time, the python requirements should b
    ```
 3. Make sure the Pegasus Simulator Extension is enabled.
 
-   [alt text](https://github.com/PegasusSimulator/PegasusSimulator/blob/main/docs/_static/pegasus_inside_extensions_menu.png)
+   ![alt text](https://github.com/PegasusSimulator/PegasusSimulator/blob/main/docs/_static/pegasus_inside_extensions_menu.png)
 
 4. On the Pegasus Simulator tab in the bottom-right corner, click on the ``Load Scene`` button.
 
-   [alt text](https://github.com/PegasusSimulator/PegasusSimulator/blob/main/docs/_static/tutorials/load_scene.png)
+   ![alt text](https://github.com/PegasusSimulator/PegasusSimulator/blob/main/docs/_static/tutorials/load_scene.png)
 
 5. Again, on the Pegasus Simulator tab, click on the ``Load Vehicle`` button.
 
-   [alt text](https://github.com/PegasusSimulator/PegasusSimulator/blob/main/docs/_static/tutorials/load_vehicle.png)
+   ![alt text](https://github.com/PegasusSimulator/PegasusSimulator/blob/main/docs/_static/tutorials/load_vehicle.png)
 6. Press the ``play`` button on the simulator's control bar on the left corner.
 
-   [alt text](https://github.com/PegasusSimulator/PegasusSimulator/blob/main/docs/_static/tutorials/play.png)
+   ![alt text](https://github.com/PegasusSimulator/PegasusSimulator/blob/main/docs/_static/tutorials/play.png)
 
 7. On QGroundControl, an arrow representing the vehicle should pop-up. You can now perform a take-off, but pressing the
 ``take-off`` button on top-left corner of QGroundControl.
 
-   [alt text](https://github.com/PegasusSimulator/PegasusSimulator/blob/main/docs/_static/tutorials/take_off.png)
+   ![alt text](https://github.com/PegasusSimulator/PegasusSimulator/blob/main/docs/_static/tutorials/take_off.png)
 
 8. On QGroundControl, left-click on a place on the map, press ``Go to location`` and slide at the bottom of the screen
 to confirm the target waypoint for the drone to follow.
 
-   [alt text](https://github.com/PegasusSimulator/PegasusSimulator/blob/main/docs/_static/tutorials/go_to_location.png)
+   ![alt text](https://github.com/PegasusSimulator/PegasusSimulator/blob/main/docs/_static/tutorials/go_to_location.png)
 
 
 <!-- 7. Build ros2 source codes
