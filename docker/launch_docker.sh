@@ -12,7 +12,6 @@ docker run --name isaac-sim-ros2 --entrypoint bash -it --gpus all -e "ACCEPT_EUL
     -v ~/docker/isaac-sim-ros2/documents:/root/Documents:rw \
     --env="DISPLAY" \
     -v $HOME/.Xauthority:/root/.Xauthority:rw \
-    -v $(pwd)/../PX4/PX4_Autopilot:/home/ubuntu/PX4-Autopilot:rw \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
     --workdir="/root/colcon_ws" \
     --volume="$(pwd)/../colcon_ws:/root/colcon_ws" \
