@@ -1,5 +1,9 @@
 # Comprehensive Guide to Dokerised implementation of IsaacSim with ROS 2 for drone development
 
+This dockerised implementation is made with aspirations from following open-source repositories. Credits should go to the respective creators.
+- [hijimasa/isaac-ros2-control-sample](https://github.com/hijimasa/isaac-ros2-control-sample)
+- [PegasusSimulator/PegasusSimulator](https://github.com/PegasusSimulator/PegasusSimulator)
+
 ## Installation
 
 ### Prerequisites
