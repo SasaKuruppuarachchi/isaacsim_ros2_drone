@@ -93,16 +93,16 @@ If GPUs fail to load after deploying Isaac sim docker please follow [these instr
 3. On the Extensions manager menu, we can enable or disable extensions. By pressing the settings button, we can 
 add a path to the Pegasus-Simulator repository.
 
-   ![alt text](https://github.com/PegasusSimulator/PegasusSimulator/blob/main/docs/_static/extensions_widget.png
+   ![alt text](https://github.com/PegasusSimulator/PegasusSimulator/blob/main/docs/_static/extensions_widget.png)
 
 4. The path inserted should be the path to the repository followed by ``/extensions``.
 
-   ![alt text](https://github.com/PegasusSimulator/PegasusSimulator/blob/main/docs/_static/ading_extension_path.png
+   ![alt text](https://github.com/PegasusSimulator/PegasusSimulator/blob/main/docs/_static/ading_extension_path.png)
 
 
 5. After adding the path to the extension, we can enable the Pegasus Simulator extension on the third-party tab.
 
-   ![alt text](https://github.com/PegasusSimulator/PegasusSimulator/blob/main/docs/_static/pegasus_inside_extensions_menu.png
+   ![alt text](https://github.com/PegasusSimulator/PegasusSimulator/blob/main/docs/_static/pegasus_inside_extensions_menu.png)
 
 
 When enabling the extension for the first time, the python requirements should be install automatically for the build in 
@@ -110,7 +110,7 @@ When enabling the extension for the first time, the python requirements should b
 
 6. The Pegasus Simulator window should appear docked to the bottom-right section of the screen.
 
-   ![alt text](https://github.com/PegasusSimulator/PegasusSimulator/blob/main/docs/_static/pegasus_gui_example.png
+   ![alt text](https://github.com/PegasusSimulator/PegasusSimulator/blob/main/docs/_static/pegasus_gui_example.png)
 
 
 
