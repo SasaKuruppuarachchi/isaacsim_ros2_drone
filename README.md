@@ -77,10 +77,9 @@ If GPUs fail to load after deploying Isaac sim docker please follow [these instr
 
    If you were unable to run the commands above successfuly, then something is incorrectly configured. Please do not proceed with this installation until you have everything setup correctly.
 
-
-   > [!NOTE]
-   > Secondary screens could freeze due to a bug in Nvidia driver. Disconnect and reconnect the HDMI
-   > If Isaac sim failed to launch please post the log in issues section
+> [!NOTE]
+> Secondary screens could freeze due to a bug in Nvidia driver. Disconnect and reconnect the HDMI
+> If Isaac sim failed to launch please post the log in issues section
 
 6. Attach to docker in new terminal to build and launch Px4_Auopilot
    ```bash
@@ -89,6 +88,10 @@ If GPUs fail to load after deploying Isaac sim docker please follow [these instr
    make px4_sitl_default none
    ```
    if PX4 lauched properly you can exit out of it.
+
+> [!NOTE]
+> For the first time, launching Isaac Sim takes a very long time.
+> Isaac Sim must be fully launched to spawn the robot.
 
 ### Enabling Pegasus Simulator in Isaacsim (First Operation)
 
@@ -177,6 +180,3 @@ to confirm the target waypoint for the drone to follow.
 
 
 
-> [!NOTE]
-> For the first time, launching Isaac Sim takes a very long time.
-> Isaac Sim must be fully launched to spawn the robot.
