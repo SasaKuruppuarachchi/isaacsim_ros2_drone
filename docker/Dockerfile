@@ -73,15 +73,26 @@ RUN apt-get remove modemmanager -y
 RUN apt install gstreamer1.0-plugins-bad gstreamer1.0-libav gstreamer1.0-gl -y
 RUN apt install libqt5gui5 -y
 RUN apt install libfuse2 -y
+WORKDIR /home/ubuntu
 RUN wget https://d176tv9ibo4jno.cloudfront.net/latest/QGroundControl.AppImage
 RUN chmod +x ./QGroundControl.AppImage
+RUN usermod -a -G dialout ubuntu
+RUN apt install gedit -y
+# tmux
+RUN apt install tmux -y
+RUN git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+RUN mkdir ~/tmux
+RUN wget https://raw.githubusercontent.com/SasaKuruppuarachchi/SasaKuruppuarachchi/main/.tmux.conf -P ~/
+#RUN tmux
+#RUN tmux source ~/tmux/.tmux.conf
 
 RUN echo 'source /opt/ros/humble/setup.bash' >> ~/.bashrc
 RUN echo 'source /root/colcon_ws/install/setup.sh' >> ~/.bashrc
 
 RUN echo 'export ISAACSIM_PATH="/isaac-sim"' >> ~/.bashrc
 RUN echo 'alias ISAACSIM_PYTHON="/isaac-sim/python.sh"' >> ~/.bashrc
-RUN echo 'alias ISAACSIM="/isaac-sim/runapp.sh"' >> ~/.bashrc    
+RUN echo 'alias ISAACSIM="/isaac-sim/runapp.sh"' >> ~/.bashrc
+RUN echo 'alias tmuxsrc="tmux source ~/tmux/.tmux.conf"' >> ~/.bashrc        
 
 
 

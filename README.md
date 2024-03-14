@@ -1,25 +1,27 @@
 # Comprehensive Guide to Dokerised implementation of IsaacSim with ROS 2 for drone development
 
-## Prerequisites
+## Installation
+
+### Prerequisites
 - Ubuntu 20.04/22.04 Operating System
 - NVIDIA GPU (RTX 2070 or higher)
 - NVIDIA GPU Driver (recommended version 525.85)
 
-## Nucleus Server
+### Nucleus Server
 [Download](https://docs.omniverse.nvidia.com/install-guide/latest/workstation-install.html) and install Omniverse Launcher and install [Nucleus Server](https://docs.omniverse.nvidia.com/launcher/latest/workstation-launcher.html#collaboration-tab)
 
-## Installing docker
+### Installing docker
 Follow the latest instructions at the [official docker page](https://docs.docker.com/engine/install/ubuntu/)
 
-## Installing Portainer CE
+### Installing Portainer CE
 Portainer CE is an open-source GUI for creating and managing docker containers. Install it following [these instructions](https://docs.portainer.io/start/install-ce/server/docker/linux)
 
-## Installing Nvidia Docker
+### Installing Nvidia Docker
 Install the Nvidia Container toolkit with [These Instructions](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html)
 
 If GPUs fail to load after deploying Isaac sim docker please follow [these instructions](). TODO
 
-## General Installation
+### General Installation
 
 1. Clone the repo to your ros2 workspace
    ```bash
@@ -82,8 +84,9 @@ If GPUs fail to load after deploying Isaac sim docker please follow [these instr
    cd /root/PX4-Autopilot
    make px4_sitl_default none
    ```
+   if PX4 lauched properly you can exit out of it.
 
-## Enabling Pegasus Simulator in Isaacsim (First Operation)
+### Enabling Pegasus Simulator in Isaacsim (First Operation)
 
 1. Launch ``ISAACSIM`` application.
 
@@ -112,6 +115,45 @@ When enabling the extension for the first time, the python requirements should b
 
    ![alt text](https://github.com/PegasusSimulator/PegasusSimulator/blob/main/docs/_static/pegasus_gui_example.png)
 
+## Getting Started
+
+1. Open a new terminal to launch QGC
+   ```bash
+   docker exec -it isaac-sim-ros2 bash
+   su ubuntu
+   cd
+   ./QGroundControl.AppImage
+   ```
+
+2. If Isaacsim is not running alunch in a new terminal
+   ```bash
+   docker exec -it isaac-sim-ros2 bash
+   ISAACSIM
+   ```
+3. Make sure the Pegasus Simulator Extension is enabled.
+
+   [alt text](https://github.com/PegasusSimulator/PegasusSimulator/blob/main/docs/_static/pegasus_inside_extensions_menu.png)
+
+4. On the Pegasus Simulator tab in the bottom-right corner, click on the ``Load Scene`` button.
+
+   [alt text](https://github.com/PegasusSimulator/PegasusSimulator/blob/main/docs/_static/tutorials/load_scene.png)
+
+5. Again, on the Pegasus Simulator tab, click on the ``Load Vehicle`` button.
+
+   [alt text](https://github.com/PegasusSimulator/PegasusSimulator/blob/main/docs/_static/tutorials/load_vehicle.png)
+6. Press the ``play`` button on the simulator's control bar on the left corner.
+
+   [alt text](https://github.com/PegasusSimulator/PegasusSimulator/blob/main/docs/_static/tutorials/play.png)
+
+7. On QGroundControl, an arrow representing the vehicle should pop-up. You can now perform a take-off, but pressing the
+``take-off`` button on top-left corner of QGroundControl.
+
+   [alt text](https://github.com/PegasusSimulator/PegasusSimulator/blob/main/docs/_static/tutorials/take_off.png)
+
+8. On QGroundControl, left-click on a place on the map, press ``Go to location`` and slide at the bottom of the screen
+to confirm the target waypoint for the drone to follow.
+
+   [alt text](https://github.com/PegasusSimulator/PegasusSimulator/blob/main/docs/_static/tutorials/go_to_location.png)
 
 
 <!-- 7. Build ros2 source codes
