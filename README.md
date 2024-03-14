@@ -79,9 +79,53 @@ If GPUs fail to load after deploying Isaac sim docker please follow [these instr
 6. Attach to docker in new terminal to build and launch Px4_Auopilot
    ```bash
    docker exec -it isaac-sim-ros2 bash
-   cd /home/ubuntu/PX4-Autopilot
+   cd /root/PX4-Autopilot
    make px4_sitl_default none
    ```
+
+## Enabling Pegasus Simulator in Isaacsim (First Operation)
+
+1. Launch ``ISAACSIM`` application.
+
+2. Open the Window->extensions on the top menubar inside Isaac Sim.
+
+    .. image:: /_static/extensions_menu_bar.png
+        :width: 600px
+        :align: center
+        :alt: Extensions on top menubar
+
+3. On the Extensions manager menu, we can enable or disable extensions. By pressing the settings button, we can 
+add a path to the Pegasus-Simulator repository.
+
+    .. image:: /_static/extensions_widget.png
+        :width: 600px
+        :align: center
+        :alt: Extensions widget
+
+4. The path inserted should be the path to the repository followed by ``/extensions``.
+
+    .. image:: /_static/ading_extension_path.png
+        :width: 600px
+        :align: center
+        :alt: Adding extension path to the extension manager
+
+5. After adding the path to the extension, we can enable the Pegasus Simulator extension on the third-party tab.
+
+    .. image:: /_static/pegasus_inside_extensions_menu.png
+        :width: 600px
+        :align: center
+        :alt: Pegasus Extension on the third-party tab
+
+When enabling the extension for the first time, the python requirements should be install automatically for the build in 
+``ISAACSIM_PYTHON`` , and after a few seconds, the Pegasus widget GUI should pop-up.
+
+6. The Pegasus Simulator window should appear docked to the bottom-right section of the screen.
+
+    .. image:: /_static/pegasus_gui_example.png
+        :width: 600px
+        :align: center
+        :alt: Pegasus Extension GUI after install
+
 
 <!-- 7. Build ros2 source codes
    ```bash

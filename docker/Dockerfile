@@ -67,6 +67,15 @@ WORKDIR /root/PX4-Autopilot/
 RUN git checkout v1.14.1
 RUN git submodule update --init --recursive
 
+WORKDIR /root
+#RUN usermod -a -G dialout $USER
+RUN apt-get remove modemmanager -y
+RUN apt install gstreamer1.0-plugins-bad gstreamer1.0-libav gstreamer1.0-gl -y
+RUN apt install libqt5gui5 -y
+RUN apt install libfuse2 -y
+RUN wget https://d176tv9ibo4jno.cloudfront.net/latest/QGroundControl.AppImage
+RUN chmod +x ./QGroundControl.AppImage
+
 RUN echo 'source /opt/ros/humble/setup.bash' >> ~/.bashrc
 RUN echo 'source /root/colcon_ws/install/setup.sh' >> ~/.bashrc
 
