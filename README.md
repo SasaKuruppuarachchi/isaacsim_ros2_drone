@@ -84,7 +84,9 @@ If GPUs fail to load after deploying Isaac sim docker please follow [these instr
 6. Attach to docker in new terminal to build and launch Px4_Auopilot
    ```bash
    docker exec -it isaac-sim-ros2 bash
-   cd /root/PX4-Autopilot
+   cd /root
+   git clone -b v1.14.0-rc2 https://github.com/PX4/PX4-Autopilot.git --recursive
+   cd PX4-Autopilot
    make px4_sitl_default none
    ```
    if PX4 lauched properly you can exit out of it.
