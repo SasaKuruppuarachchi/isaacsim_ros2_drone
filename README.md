@@ -36,6 +36,8 @@ If GPUs fail to load after deploying Isaac sim docker please follow [these instr
    ```bash
    cd isaacsim_ros2_drone
    git submodule update --init --recursive
+   cd px4
+   git clone -b v1.14.0-rc2 https://github.com/PX4/PX4-Autopilot.git --recursive
    ```
 
 3. Build a docker image with shell script.
@@ -85,7 +87,6 @@ If GPUs fail to load after deploying Isaac sim docker please follow [these instr
    ```bash
    docker exec -it isaac-sim-ros2 bash
    cd /root
-   git clone -b v1.14.0-rc2 https://github.com/PX4/PX4-Autopilot.git --recursive
    cd PX4-Autopilot
    make px4_sitl_default none
    ```
