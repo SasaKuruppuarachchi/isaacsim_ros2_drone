@@ -3,6 +3,7 @@
 This dockerised implementation is made with aspirations from following open-source repositories. Credits should go to the respective creators.
 - [hijimasa/isaac-ros2-control-sample](https://github.com/hijimasa/isaac-ros2-control-sample)
 - [PegasusSimulator/PegasusSimulator](https://github.com/PegasusSimulator/PegasusSimulator)
+- [simulately.wiki](https://simulately.wiki/docs/)
 
 ## Installation
 
